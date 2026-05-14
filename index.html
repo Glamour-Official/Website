@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Glamour - Unlock Access</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+body{
+background:
+linear-gradient(
+135deg,
+#000000 0%,
+#0b0b0b 25%,
+#1a1405 50%,
+#062c24 75%,
+#000000 100%
+);
+
+min-height:100vh;
+color:white;
+overflow-x:hidden;
+}
+
+/* SOFT BACKGROUND ANIMATION */
+
+body::before{
+content:'';
+position:fixed;
+top:-180px;
+left:-120px;
+width:500px;
+height:500px;
+background:radial-gradient(circle,rgba(255,215,0,0.15),transparent 70%);
+animation:goldGlow 6s ease-in-out infinite alternate;
+}
+
+body::after{
+content:'';
+position:fixed;
+bottom:-200px;
+right:-150px;
+width:450px;
+height:450px;
+background:radial-gradient(circle,rgba(0,255,170,0.08),transparent 70%);
+animation:greenGlow 7s ease-in-out infinite alternate;
+}
+
+/* ANIMATION KEYFRAMES */
+
+@keyframes goldGlow{
+from{
+transform:scale(1);
+opacity:0.7;
+}
+to{
+transform:scale(1.08);
+opacity:1;
+}
+}
+
+@keyframes greenGlow{
+from{
+transform:scale(1);
+opacity:0.5;
+}
+to{
+transform:scale(1.06);
+opacity:0.9;
+}
+}
+
+/* TOP LOGO */
+
+.logo-top{
+width:100%;
+padding:25px 20px 0;
+position:relative;
+z-index:5;
+animation:fadeDown 1s ease;
+}
+
+.logo-top img{
+width:200px;
+display:block;
+}
+
+/* MAIN */
+
+.main{
+display:flex;
+justify-content:center;
+padding:25px 18px 40px;
+position:relative;
+z-index:5;
+}
+
+/* CONTAINER */
+
+.container{
+width:100%;
+max-width:430px;
+animation:fadeUp 1s ease;
+}
+
+/* HEADING */
+
+h1{
+font-size:30px;
+margin-bottom:18px;
+font-weight:800;
+background:linear-gradient(90deg,#ffe16a,#f4c542);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+/* SUBTITLE */
+
+.subtitle{
+font-size:18px;
+line-height:1.7;
+color:#dddddd;
+margin-bottom:28px;
+}
+
+/* FORM BOX */
+
+.form-box{
+background:rgba(10,10,10,0.55);
+border:1px solid rgba(255,215,0,0.12);
+backdrop-filter:blur(18px);
+padding:22px;
+border-radius:30px;
+box-shadow:0 0 25px rgba(255,215,0,0.05);
+}
+
+/* INPUTS */
+
+input,select{
+width:100%;
+height:56px;
+margin-bottom:16px;
+border:none;
+outline:none;
+padding:0 18px;
+border-radius:16px;
+background:rgba(255,255,255,0.06);
+color:white;
+font-size:16px;
+transition:0.3s ease;
+}
+
+/* INPUT FOCUS */
+
+input:focus,
+select:focus{
+background:rgba(255,255,255,0.09);
+box-shadow:0 0 10px rgba(255,215,0,0.12);
+}
+
+/* BUTTON */
+
+button{
+width:100%;
+height:58px;
+border:none;
+border-radius:18px;
+background:linear-gradient(135deg,#ffe16a,#d4a017);
+font-size:18px;
+font-weight:700;
+color:black;
+cursor:pointer;
+transition:0.3s ease;
+}
+
+/* BUTTON HOVER */
+
+button:hover{
+transform:translateY(-2px);
+box-shadow:0 8px 18px rgba(255,215,0,0.25);
+}
+
+/* FADE ANIMATIONS */
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(25px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+@keyframes fadeDown{
+from{
+opacity:0;
+transform:translateY(-20px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- TOP LOGO -->
+
+<div class="logo-top">
+<img src="glamour-logo.png" alt="Glamour Logo">
+</div>
+
+<!-- MAIN -->
+
+<div class="main">
+
+<div class="container">
+
+<h1>Create Your Membership</h1>
+
+<p class="subtitle">
+Welcome to GLAMOUR Official Platform, where creativity meets luxury.
+
+Create your GLAMOUR account to join and begin your premium lifestyle experience.
+
+Register below to secure your GLAMOUR membership today.
+</p>
+
+<div class="form-box">
+
+<form action="payment.html" method="GET">
+
+<input type="text" name="fullname" placeholder="Full Name" required>
+
+<input type="text" placeholder="Username" required>
+
+<input type="tel" placeholder="Phone Number" required>
+
+<input type="email" placeholder="Email Address" required>
+
+<input type="password" placeholder="Password" required>
+
+<select required>
+<option>Select Country</option>
+<option>Nigeria</option>
+<option>Ghana</option>
+<option>Kenya</option>
+<option>Cameroon</option>
+<option>South Africa</option>
+<option>USA</option>
+<option>United Kingdom</option>
+<option>Others</option>
+</select>
+
+<select required>
+<option>Membership fee - ₦14,000</option>
+</select>
+
+<button type="submit">
+Activate Membership
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>
